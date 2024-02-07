@@ -1,6 +1,6 @@
 import pytest
 
-from task1.vector import Vector
+from vector import Vector
 
 
 @pytest.fixture
@@ -13,6 +13,7 @@ def vectors():
 def test_addition(vectors):
     v1, v2 = vectors
     result = v1 + v2
+    print(result)
     assert result == Vector(4, 6)
 
 
@@ -20,6 +21,12 @@ def test_subtraction(vectors):
     v1, v2 = vectors
     result = v1 - v2
     assert result == Vector(-2, -2)
+
+
+def test_mul(vectors):
+    v1, v2 = vectors
+    result = v1 * v2
+    assert result == Vector(3, 8)
 
 
 def test_multiplication(vectors):

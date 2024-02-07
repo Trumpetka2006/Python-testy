@@ -1,6 +1,16 @@
 class PriorityQueue:
-    pass
+    def __init__(self) -> None:
+        self.mem = []
+        pass
 
+    def __len__(self):
+        return len(self.mem)
+
+    def push(self, name=str, prio=int):
+        self.mem.append()
+        pass
+
+    pass
 
 
 priority_queue = PriorityQueue()
