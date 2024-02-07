@@ -16,8 +16,11 @@ def test_pop():
     pq.push("Task 1", 3)
     pq.push("Task 2", 1)
     pq.push("Task 3", 2)
+    pq.push("Task LoL", 2)
 
     assert pq.pop() == "Task 2"
+    assert pq.pop() == "Task 3"
+    assert pq.pop() == "Task LoL"
     assert len(pq) == 2
 
 

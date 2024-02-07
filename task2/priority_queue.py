@@ -32,6 +32,7 @@ priority_queue = PriorityQueue()
 priority_queue.push("Task 1", 3)
 priority_queue.push("Task 2", 1)
 priority_queue.push("Task 3", 2)
+priority_queue.push("Task LoL", 2)
 
 print("Priority Queue Length:", len(priority_queue))
 
