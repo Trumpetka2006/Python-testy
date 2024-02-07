@@ -1,15 +1,30 @@
 class PriorityQueue:
     def __init__(self) -> None:
-        self.mem = []
+        self.mem = {}
         pass
 
     def __len__(self):
         return len(self.mem)
 
     def push(self, name=str, prio=int):
-        self.mem.append()
+        self.mem[prio] = name
         pass
 
+    def __iter__(self):
+        keys = []
+        keys = list(self.mem.keys())
+        keys.sort()
+        buffer = []
+        for key in keys:
+            buffer.append(self.mem[key])
+        return iter(buffer)
+
+    def pop(self):
+        key = list(self.mem.keys())
+        key.sort()
+        toretuen = self.mem[key[0]]
+        self.mem.pop(key[0])
+        return toretuen
     pass
 
 
