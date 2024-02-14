@@ -20,8 +20,8 @@ def test_pop():
 
     assert pq.pop() == "Task 2"
     assert pq.pop() == "Task 3"
-    assert pq.pop() == "Task LoL"
-    assert len(pq) == 2
+    assert pq.pop() == "Task 1"
+    assert len(pq) == 1
 
 
 def test_empty_pop():

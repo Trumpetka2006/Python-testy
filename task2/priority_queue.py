@@ -7,6 +7,12 @@ class PriorityQueue:
         return len(self.mem)
 
     def push(self, name=str, prio=int):
+        sortable = True
+        while sortable:
+            if prio in list(self.mem.keys()):
+                prio += 1
+            else:
+                sortable = False
         self.mem[prio] = name
         pass
 
@@ -25,6 +31,7 @@ class PriorityQueue:
         toretuen = self.mem[key[0]]
         self.mem.pop(key[0])
         return toretuen
+
     pass
 
 
